@@ -16,7 +16,7 @@ token = os.getenv("TOKEN_BOT")
 chat_id = os.getenv("ID_CHAT")
 donoDaLavanderia = "Jason"
 
-# Aqui você define os IPs que configurou no modem
+# Ips definidos
 dispositivos = {
     "192.168.1.20": "TOTEM DE PAGAMENTO",
     "192.168.1.51": "MAQUINA 01",
