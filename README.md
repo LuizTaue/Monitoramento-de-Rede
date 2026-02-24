@@ -32,3 +32,6 @@ Requests (para falar com o Telegram)
 Dotenv (para não subir senhas no GitHub)
 
 PyInstaller (para virar um programa de Windows)
+
+
+Atualização: Agora o sistema também notifica quando a conexão é reestabelecida.
