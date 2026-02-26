@@ -35,4 +35,5 @@ PyInstaller (para virar um programa de Windows)
 
 
 Atualização: Agora o sistema também notifica quando a conexão é reestabelecida.
+
 Atualização: Interface gráfica (GUI) implementada com sucesso, permitindo o controle visual do monitoramento e ajuste de configurações de tempo.
