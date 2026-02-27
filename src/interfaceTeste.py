@@ -1,6 +1,10 @@
 import customtkinter as ctk
 import os
+from dotenv import load_dotenv
 
+diretorio_atual = os.path.dirname(__file__)
+caminho_raiz = os.path.join(diretorio_atual, "..")
+load_dotenv(os.path.join(caminho_raiz, ".env"))
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 caminhoDesktop = os.path.join(os.environ['USERPROFILE'], 'Desktop') 
@@ -26,11 +30,27 @@ class App(ctk.CTk):
 
         # Status
 
-        self.status = ctk.CTkFrame(self)
-        self.status.pack(pady=10, padx=20, fill="both", expand=True)
-        
-        self.info = ctk.CTkLabel(self.status, text="Aguardando início do monitoramento...", font=("Roboto", 14))
-        self.info.pack(pady=20)
+        self.listaMaquinas = ["ip01", "ip02", "ip03", "ip04", "ip05"]
+
+        self.statusLeds = {}
+
+        self.frameStatus = ctk.CTkFrame(self)
+        self.frameStatus.pack(pady=10, padx=20, fill="both", expand="True")
+
+        for nome in self.listaMaquinas:
+
+            linha = ctk.CTkFrame(self.frameStatus, fg_color="transparent")
+            linha.pack(fill="x", pady=5, padx=10)
+
+            CNome = ctk.CTkLabel(linha, text=nome, font=("Roboto", 14))
+            CNome.pack(side="left")
+
+
+
+            led = ctk.CTkLabel(linha, text="●", text_color="gray", font=("Roboto", 24))
+            led.pack(side="right")
+
+            self.statusLeds[nome] = led
 
         # Campo pra mudar o tempo (INPUT DO CODIGO)
 

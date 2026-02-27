@@ -9,6 +9,9 @@ from dotenv import load_dotenv
 
 # Configurações
 
+diretorio_atual = os.path.dirname(__file__)
+caminho_raiz = os.path.join(diretorio_atual, "..")
+load_dotenv(os.path.join(caminho_raiz, ".env"))
 caminhoDesktop = os.path.join(os.environ['USERPROFILE'], 'Desktop') 
 arquivoConfig = os.path.join(caminhoDesktop, 'configuração_de_tempo_checagem.txt')
 load_dotenv()
@@ -18,11 +21,11 @@ donoDaLavanderia = "Jason"
 
 # Ips definidos
 dispositivos = {
-    #"192.168.1.20": "TOTEM DE PAGAMENTO",
-    #"192.168.1.51": "MAQUINA 01",
-    "192.168.18.93": "MAQUINA 02", # teste com o ip do meu celular
-    "192.168.18.1": "MAQUINA 03", # gateway do meu modem pra teste
-    #"192.168.1.54": "MAQUINA 04"
+    #"ip01": "TOTEM DE PAGAMENTO",
+    #"ip02": "MAQUINA 01",
+    "ip03": "MAQUINA 02", # teste com o ip do meu celular
+    "ip04": "MAQUINA 03", # gateway do meu modem pra teste
+    #"ip05": "MAQUINA 04"
 }
 
 estadosAnteriores = {ip: True for ip in dispositivos}
