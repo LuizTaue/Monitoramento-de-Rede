@@ -38,4 +38,3 @@ Atualização: Agora o sistema também notifica quando a conexão é reestabelec
 
 Atualização: Interface gráfica (GUI) implementada com sucesso, permitindo o controle visual do monitoramento e ajuste de configurações de tempo.
 
-![alt text](image.png)
